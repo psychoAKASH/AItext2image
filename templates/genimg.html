@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Generator</title>
+</head>
+<body>
+<form method="post" action="genimg">
+    {% csrf_token %}
+    <input type="text" name="prompt" placeholder="Enter clear description for the generation" required />
+    <input type="submit" value="Generate image"/>
+
+</form>
+{% if response1 %}
+<img src="{{response1}}">
+
+{% endif %}
+{%if response2 %}
+<img src="{{response2}}">
+
+{% endif %}
+{% if response3 %}
+<img src="{{response3}}">
+
+{% endif %}
+</body>
+</html>
